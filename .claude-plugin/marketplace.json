@@ -1,0 +1,31 @@
+{
+  "name": "world4you-skill",
+  "owner": {
+    "name": "mobilewhatelse"
+  },
+  "metadata": {
+    "description": "Skills for building and deploying PHP/HTML homepages on World4You shared hosting",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "world4you-hosting",
+      "source": "./",
+      "description": "Build and deploy PHP/HTML homepages on World4You shared hosting — file structure, WebFTP upload, PHP patterns, LinkedIn post embeds, and troubleshooting",
+      "version": "0.1.0",
+      "skills": [
+        "./.github/skills/world4you-hosting"
+      ],
+      "repository": "https://github.com/mobilewhatelse/world4you-skill",
+      "keywords": [
+        "world4you",
+        "hosting",
+        "php",
+        "homepage",
+        "webftp",
+        "linkedin-embed"
+      ],
+      "license": "MIT"
+    }
+  ]
+}
