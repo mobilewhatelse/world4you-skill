@@ -97,3 +97,21 @@ Google Fonts are loaded via `<link>` in `<head>`. If they don't load:
 ## `.htaccess` / server configuration
 
 World4You supports `.htaccess` for Apache configuration. You generally don't need it for a simple PHP site. If you add one, ensure it doesn't accidentally block `data/posts.json` from being fetched by the browser.
+
+**A `<Files>` block with `Require all denied` returned 403 for the whole folder**, not just the named file. Keep secrets outside `wwwroot/` instead of protecting them with `.htaccess` (see [secrets-and-api.md](secrets-and-api.md)).
+
+## POST request returns 403 Forbidden
+
+**Symptom:** A `fetch()` POST to a PHP script answers with Apache's "403 Forbidden" page, while a GET reaches the script.
+
+**Cause:** The hosting firewall blocks request bodies with non-ASCII characters (umlauts), even `\u` escaped.
+
+**Fix:** Send the text Base64-encoded and decode it in PHP — see [secrets-and-api.md](secrets-and-api.md).
+
+## JSON API returns "Deprecated: Function curl_close()"
+
+PHP 8.5 prints a deprecation notice before the JSON, so the browser can't parse it. Remove `curl_close()`; it has had no effect since PHP 8.0.
+
+## New photo uploaded, browser still shows the old one
+
+Browsers cache images. Append the file's modification time: `<img src="img/<?= $photo ?>?v=<?= filemtime(__DIR__ . '/img/' . $photo) ?>">`.

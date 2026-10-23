@@ -29,6 +29,7 @@ Load only the reference relevant to the current task:
 | [file-structure.md](references/file-structure.md) | Setting up the project folder layout or uploading for the first time |
 | [php-setup.md](references/php-setup.md) | Writing PHP (photo detection, date output, admin auth) |
 | [linkedin-posts.md](references/linkedin-posts.md) | Adding or troubleshooting the LinkedIn embedded-posts section |
+| [secrets-and-api.md](references/secrets-and-api.md) | Storing passwords/API keys, deploying via FTP command line, PHP proxy for external APIs, firewall 403 on POST |
 | [troubleshooting.md](references/troubleshooting.md) | ERR_CONNECTION_REFUSED, CSS not loading, posts not showing, photo ring issues |
 
 ## Key facts about World4You

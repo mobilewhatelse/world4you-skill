@@ -29,6 +29,7 @@
 | `references/file-structure.md` | `wwwroot/` layout, upload checklist, local preview |
 | `references/php-setup.md` | Photo detection, admin auth, JSON read/write, what's available on World4You |
 | `references/linkedin-posts.md` | Iframe embed flow, JS loader, `posts.json` format, common issues |
+| `references/secrets-and-api.md` | Secrets outside `wwwroot/`, FTP deploy with curl, API proxy, firewall workaround |
 | `references/troubleshooting.md` | ERR_CONNECTION_REFUSED, CSS cache, JS crashes, oval photo ring, lost posts |
 
 ---
